@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIX LAG AUTO SENSI</title>
+    <style>
+        :root{--neon-cyan:#00ffff;--neon-blue:#0088ff;--bg-dark:#0a0f1d}*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}body{background:var(--bg-dark);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px;overflow-x:hidden}.container{background:rgba(15,23,42,0.9);border-radius:25px;padding:30px 20px;max-width:400px;width:100%;border:2px solid rgba(0,255,255,0.2);box-shadow:0 0 30px rgba(0,255,255,0.1);position:relative}h1{text-align:center;color:var(--neon-cyan);font-size:22px;margin-bottom:25px;text-shadow:0 0 15px rgba(0,255,255,0.5);letter-spacing:1px;text-transform:uppercase}.platform-selector{display:flex;gap:10px;margin-bottom:15px}.platform-btn{flex:1;padding:10px;background:rgba(255,255,255,0.05);border:1px solid var(--neon-blue);color:var(--neon-blue);border-radius:8px;cursor:pointer;font-weight:bold;transition:0.3s}.platform-btn.active{background:var(--neon-blue);color:#fff;box-shadow:0 0 15px rgba(0,136,255,0.5)}input{width:100%;padding:12px;background:rgba(0,0,0,0.3);border:1px solid rgba(0,255,255,0.2);border-radius:8px;color:#fff;margin-bottom:15px;text-align:center;outline:none}.btn-main{width:100%;padding:12px;background:var(--neon-blue);border:none;border-radius:8px;color:#fff;font-weight:bold;cursor:pointer;margin-bottom:10px;text-transform:uppercase}.btn-reset{width:100%;padding:10px;background:rgba(255,255,255,0.1);border:1px solid #444;color:#ccc;border-radius:8px;cursor:pointer}.results{display:none;margin-top:20px}.sensi-item{margin-bottom:15px}.sensi-info{display:flex;justify-content:space-between;color:#fff;font-size:14px;margin-bottom:6px}.sensi-label{display:flex;align-items:center;color:#e0e0e0;font-weight:500}.progress-bar{height:6px;background:rgba(255,255,255,0.1);border-radius:10px;overflow:hidden;position:relative}.progress-fill{height:100%;background:linear-gradient(90deg,var(--neon-blue),var(--neon-cyan));width:0%;transition:width 1s ease-out;box-shadow:0 0 10px var(--neon-cyan)}.dpi-box{background:rgba(0,255,255,0.05);border:1px dashed var(--neon-cyan);padding:15px;text-align:center;margin-top:20px;border-radius:10px}.dpi-text{color:var(--neon-cyan);font-weight:bold;font-size:18px}.fire-btn-text{color:#ff4d4d;font-weight:bold;text-align:center;margin-top:15px;font-size:15px;letter-spacing:1px}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="l-b">
+            <h1>XÁC MINH</h1>
+            <input type="password" id="p-i" placeholder="Mật khẩu...">
+            <button class="btn-main" id="b-l">ĐĂNG NHẬP</button>
+            <p id="e-m" style="color:red;font-size:12px;text-align:center;display:none">Sai mật khẩu!</p>
+        </div>
+        <div id="m-a" style="display:none">
+            <h1>FIX LAG AUTO</h1>
+            <div class="platform-selector">
+                <button class="platform-btn active" id="btn-ios">IOS</button>
+                <button class="platform-btn" id="btn-android">ANDROID</button>
+            </div>
+            <input type="text" id="d-n" placeholder="Tên dòng máy...">
+            <button class="btn-main" id="g-s">LẤY ĐỘ NHẠY</button>
+            <button class="btn-reset" id="r-s">RESET</button>
+            <div class="results" id="res">
+                <div class="sensi-item"><div class="sensi-info"><div>Nhìn Xung Quanh</div><div id="v1">0</div></div><div class="progress-bar"><div class="progress-fill" id="b1"></div></div></div>
+                <div class="sensi-item"><div class="sensi-info"><div>Hồng Tâm</div><div id="v2">0</div></div><div class="progress-bar"><div class="progress-fill" id="b2"></div></div></div>
+                <div class="sensi-item"><div class="sensi-info"><div>Ống Ngắm X2</div><div id="v3">0</div></div><div class="progress-bar"><div class="progress-fill" id="b3"></div></div></div>
+                <div class="sensi-item"><div class="sensi-info"><div>Ống Ngắm X4</div><div id="v4">0</div></div><div class="progress-bar"><div class="progress-fill" id="b4"></div></div></div>
+                <div class="sensi-item"><div class="sensi-info"><div>Súng Ngắm</div><div id="v5">0</div></div><div class="progress-bar"><div class="progress-fill" id="b5"></div></div></div>
+                <div class="sensi-item"><div class="sensi-info"><div>Camera</div><div id="v6">0</div></div><div class="progress-bar"><div class="progress-fill" id="b6"></div></div></div>
+                <div class="fire-btn-text">NÚT BẮN: <span id="f-v">31</span>%</div>
+                <div class="dpi-box"><div style="font-size:10px;color:#888">DPI</div><div class="dpi-text" id="d-v">0</div></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(_0x1,_0x2){const _0x3=function(_0x4){while(--_0x4){_0x1['push'](_0x1['shift']());}};_0x3(++_0x2);}(['value','display','none','block','fixlagautov16','addEventListener','click','getElementById','p-i','l-b','m-a','e-m','active','btn-ios','btn-android','classList','add','remove','d-n','res','v','b','innerText','style','width','f-v','d-v'],0x1b3));const _0x4=function(_0x5,_0x6){const _0x1=['value','display','none','block','fixlagautov16','addEventListener','click','getElementById','p-i','l-b','m-a','e-m','active','btn-ios','btn-android','classList','add','remove','d-n','res','v','b','innerText','style','width','f-v','d-v'];return _0x1[_0x5];};let platform='ios';document[_0x4(0x7)](_0x4(0xd))[_0x4(0x5)](_0x4(0x6),()=>{platform='ios';document[_0x4(0x7)](_0x4(0xd))[_0x4(0xf)][_0x4(0x10)](_0x4(0xc));document[_0x4(0x7)](_0x4(0xe))[_0x4(0xf)][_0x4(0x11)](_0x4(0xc));});document[_0x4(0x7)](_0x4(0xe))[_0x4(0x5)](_0x4(0x6),()=>{platform='android';document[_0x4(0x7)](_0x4(0xe))[_0x4(0xf)][_0x4(0x10)](_0x4(0xc));document[_0x4(0x7)](_0x4(0xd))[_0x4(0xf)][_0x4(0x11)](_0x4(0xc));});document[_0x4(0x7)]('b-l')[_0x4(0x5)](_0x4(0x6),()=>{if(document[_0x4(0x7)](_0x4(0x8))[_0x4(0x0)]===_0x4(0x4)){document[_0x4(0x7)](_0x4(0x9))[_0x4(0x17)][_0x4(0x1)]=_0x4(0x2);document[_0x4(0x7)](_0x4(0xa))[_0x4(0x17)][_0x4(0x1)]=_0x4(0x3);}else{document[_0x4(0x7)](_0x4(0xb))[_0x4(0x17)][_0x4(0x1)]=_0x4(0x3);}});document[_0x4(0x7)]('g-s')[_0x4(0x5)](_0x4(0x6),()=>{const n=document[_0x4(0x7)](_0x4(0x12))[_0x4(0x0)];if(!n)return alert('Vui lòng nhập tên máy!');document[_0x4(0x7)](_0x4(0x13))[_0x4(0x17)][_0x4(0x1)]=_0x4(0x3);for(let i=1;i<=6;i++){const v=Math.floor(Math.random()*80)+120;document[_0x4(0x7)](_0x4(0x14)+i)[_0x4(0x16)]=v;setTimeout(()=>{document[_0x4(0x7)](_0x4(0x15)+i)[_0x4(0x17)][_0x4(0x18)]=(v/200*100)+'%';},i*100);}document[_0x4(0x7)](_0x4(0x19))[_0x4(0x16)]=Math.floor(Math.random()*20)+30;document[_0x4(0x7)](_0x4(0x1a))[_0x4(0x16)]=Math.floor(Math.random()*200)+400;});document[_0x4(0x7)]('r-s')[_0x4(0x5)](_0x4(0x6),()=>{document[_0x4(0x7)](_0x4(0x12))[_0x4(0x0)]='';document[_0x4(0x7)](_0x4(0x13))[_0x4(0x17)][_0x4(0x1)]=_0x4(0x2);for(let i=1;i<=6;i++){document[_0x4(0x7)](_0x4(0x15)+i)[_0x4(0x17)][_0x4(0x18)]='0%';}});
+    </script>
+</body>
+</html>
